@@ -1,0 +1,25 @@
+#include<stdio.h>       //adding the header file in the program 
+
+int fact(int);                //declear the function 
+
+int main()
+{
+int n, res;                                       //declear n and res as an interger
+printf("Enter the number you want to find the factorial of :");
+scanf("%d", &n);
+res = fact(n);                                          //call the function           
+printf("The factoril of %d is : %d \n",n , res);
+return 0;
+}
+
+int fact(int x)                      //function define
+{
+if(x==0)                                //check equality
+return 0;
+
+if(x==1)
+return 1;
+
+else
+return x*fact(x-1);                   //return the value to the main function 
+}
